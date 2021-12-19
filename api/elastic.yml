@@ -2,15 +2,14 @@ version: '3.7'
 
 services:
   elasticsearch:
-    container_name: elastic
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1
+    container_name: es01
     environment:
-      - cluster.name=es
-      - discovery.type=single-node
-      - http.cors.enabled=true
-      - http.cors.allow-credentials=true
-      - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
-      - http.cors.allow-origin=/https?:\/\/localhost(:[0-9]+)?/
+      - node.name=es01
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=es01
+      - cluster.initial_master_nodes=es01
+      - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ulimits:
       memlock:
@@ -18,4 +17,3 @@ services:
         hard: -1
     ports:
       - "9500:9500"
-    restart: unless-stopped

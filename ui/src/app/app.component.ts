@@ -26,8 +26,11 @@ export class AppComponent implements OnInit {
     this.form = this.fb.group({
       title: [],
       file: [],
-    })
+    });
 
+    this.http.get('http://localhost:4000/documents/search?q=123').subscribe(res => {
+      console.log(res);
+    });
   }
 
   public submit(): void {

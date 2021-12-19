@@ -23,7 +23,7 @@ export interface DocumentSearchResult {
 
 @Injectable()
 export class DocumentService {
-  public static readonly index = 'posts';
+  public static readonly index = 'document';
 
   constructor(
     @InjectRepository(DocumentEntity) private documentRepository: Repository<DocumentEntity>,
