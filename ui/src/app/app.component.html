@@ -1,0 +1,115 @@
+<div class="bg-gray-100 relative">
+  <div class="content-wrapper content-wrapper--medium">
+    <div class="card">
+      <div class="account-page account-page--form">
+
+        <form
+          (ngSubmit)="submit()"
+          [formGroup]="form"
+          class="grid grid-cols-6 gap-1 gap-x-4">
+
+          <div class="col-span-6 pb-4 mb-4 border-b border-gray-200 flex items-center">
+            <h2 class="heading">
+              Add document
+            </h2>
+
+            <button
+              type="submit"
+              [disabled]="form.invalid"
+              class="btn--blue block ml-auto text-base">
+              Create
+            </button>
+          </div>
+
+          <div class="col-span-6">
+            <label
+              for="name"
+              class="block text-lg font-bold mb-4 text-gray-900">
+              Title
+            </label>
+            <input
+              id="name"
+              formControlName="title"
+              placeholder="Title"
+              class="form__input rounded-md focus:ring-blue-700 focus:border-blue-700 block w-full text-lg border rounded-none rounded-l-md pl-12 border-gray-300"
+            />
+          </div>
+
+<!--          appDropFile-->
+<!--          (fileDropped)="setLogo($event)"-->
+
+          <div class="col-span-6 flex flex-col mb-6">
+            <label class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2 form-label required">
+              Logo
+            </label>
+            <div
+              class="mt-1 border-2 border-gray-300 rounded-md relative"
+              [class.border-dashed]="!form.controls.file.value">
+              <button
+                type="button"
+                *ngIf="!!form.controls.file.value"
+                (click)="form.controls.file.setValue(null)"
+                class="absolute top-0 right-0 inline-flex text-gray-800 items-center text-sm p-2 justify-center border-transparent text-sm font-medium rounded-full text-white hover:bg-gray-200 focus:bg-gray-200 focus:outline-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.9998 22C7.95337 22.0024 4.30431 19.5659 2.75548 15.8276C1.20665 12.0893 2.06336 7.78606 4.92581 4.92598C7.45311 2.39868 11.1367 1.41166 14.5891 2.33672C18.0414 3.26177 20.738 5.95836 21.6631 9.41072C22.5881 12.8631 21.6011 16.5467 19.0738 19.074C17.2013 20.955 14.654 22.0086 11.9998 22ZM3.99981 12.172C4.04713 16.5732 7.64092 20.1095 12.0424 20.086C16.4438 20.0622 19.9994 16.4875 19.9994 12.086C19.9994 7.68449 16.4438 4.10975 12.0424 4.08598C7.64092 4.06244 4.04713 7.59874 3.99981 12V12.172ZM9.40881 16L7.99981 14.59L10.5898 12L7.99981 9.40998L9.40981 7.99998L11.9998 10.59L14.5898 7.99998L15.9998 9.40998L13.4098 12L15.9998 14.59L14.5908 16L11.9998 13.41L9.40981 16H9.40881Z"
+                    fill="#2E3A59"></path>
+                </svg>
+              </button>
+
+              <img
+                *ngIf="form.controls.file.value; else noCover"
+                class="h-74"
+                [src]="sanitizer.bypassSecurityTrustUrl(form.controls.file.value)"
+                alt="Course Cover"
+              />
+
+              <ng-template #noCover>
+                <div
+                  class="flex items-center h-10 justify-center px-6 pt-5 pb-6"
+                >
+                  <div class="space-y-1 text-center">
+                    <svg
+                      class="mx-auto h-5 w-5 text-gray-400"
+                      stroke="currentColor"
+                      fill="none"
+                      viewBox="0 0 48 48"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="flex text-sm text-gray-600">
+                      <label
+                        for="file-upload"
+                        class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                      >
+                        <span>Select logo</span>
+                        <input
+                          id="file-upload"
+                          name="file-upload"
+                          accept="application/pdf"
+                          type="file"
+                          (change)="fileBrowseHandler($event)"
+                          class="sr-only"
+                        />
+                      </label>
+                      <p class="pl-1">or drop</p>
+                    </div>
+                    <p class="text-xs text-gray-500">920 x 320px (PNG, JPG, GIF less 10mb)</p>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

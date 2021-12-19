@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  api:
+    container_name: pdf-api
+    build: .
+    env_file: .env
+    depends_on:
+      - postgres
+    ports:
+      - '${API_PORT}:${API_PORT}'
+    restart: unless-stopped

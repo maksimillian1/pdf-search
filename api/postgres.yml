@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: postgres
+    env_file: .env
+    image: postgres:11.5
+    # command: ["postgres", "-c", "log_statement=all"]
+    environment:
+      POSTGRES_USER: ${DS_USER}
+      POSTGRES_PASSWORD: ${DS_PASSWORD}
+      POSTGRES_DB: ${DS_DATABASE}
+      PGDATA: /data/postgres
+    ports:
+      - '${DS_PORT_EXTERNAL}:${DS_PORT}'
+    restart: unless-stopped
