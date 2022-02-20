@@ -22,13 +22,14 @@ export class AppComponent implements OnInit {
     public sanitizer: DomSanitizer
   ) {}
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.form = this.fb.group({
       title: [],
       file: [],
     });
 
-    this.http.get('http://localhost:4000/documents/search?q=123').subscribe(res => {
+    const search = 'укт';
+    this.http.get(`http://localhost:4000/documents/search?q=${search}`).subscribe(res => {
       console.log(res);
     });
   }

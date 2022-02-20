@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { DocumentEntity } from './document.entity';
 import { MulterModule } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
-import { ElasticsearchModule } from '../elasticsearch/elasticsearch.module';
+import { SearchModule } from '../search/search.module';
 
 
 @Module({
@@ -17,7 +17,7 @@ import { ElasticsearchModule } from '../elasticsearch/elasticsearch.module';
         filename: (req, file, callback) => callback(null, file.originalname),
       }),
     }),
-    ElasticsearchModule,
+    SearchModule,
   ],
   controllers: [
     DocumentController,

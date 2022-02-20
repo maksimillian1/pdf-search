@@ -13,7 +13,7 @@ export class DocumentController {
   }
 
   @Get('search')
-  searchDocuments(@Query() q: string): Promise<DocumentEntity[]> {
+  searchDocuments(@Query('q') q: string): Promise<DocumentEntity[]> {
     return this.documentService.search(q);
   }
 

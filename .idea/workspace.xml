@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cf4d7595-0bcc-45dc-b4cf-926c181790db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/api/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/elastic.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/elastic.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/documents/document.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/documents/document.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/documents/document.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/documents/document.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/documents/documents.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/documents/documents.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/elasticsearch/elasticsearch.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/search/search.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="a1p40yh2" />
+  </component>
+  <component name="ProjectId" id="22SLhKXiS6zBzL4Kj03MqTBlrEs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TF_FMT" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/api/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/api/src/documents" />
+      <recent name="$PROJECT_DIR$/api/src/config" />
+      <recent name="$PROJECT_DIR$/api/docker" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/src" />
+      <recent name="$PROJECT_DIR$/api/db" />
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/api/src/db" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf4d7595-0bcc-45dc-b4cf-926c181790db" name="Changes" comment="" />
+      <created>1639826164553</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639826164553</updated>
+      <workItem from="1639826167512" duration="28949000" />
+      <workItem from="1643911137570" duration="754000" />
+      <workItem from="1645272647475" duration="11338000" />
+    </task>
+    <task id="LOCAL-00001" summary="adjustments">
+      <created>1639950457384</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639950457384</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/api" />
+      <path value="$PROJECT_DIR$/ui" />
+    </ignored-roots>
+    <MESSAGE value="adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjustments" />
+  </component>
+</project>

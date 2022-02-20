@@ -50,24 +50,29 @@ export class DocumentService {
   }
 
   async indexDocument(document: DocumentEntity & {content: string}) {
-    return this.elasticsearchService.index<DocumentSearchResult, DocumentEntity>({
+    const index = this.elasticsearchService.index<DocumentEntity & {content: string}>({
       index: DocumentService.index,
       body: document
     });
+
+    await this.elasticsearchService.indices.refresh({index: DocumentService.index});
+
+    return index;
   }
 
   async search(text: string) {
-    const { body } = await this.elasticsearchService.search<DocumentSearchResult>({
+    const {body} = await this.elasticsearchService.search<DocumentSearchResult>({
       index: DocumentService.index,
       body: {
         query: {
-          multi_match: {
-            query: text,
-            fields: ['title', 'content']
+          multi_match : {
+            query:      text,
+            fields:     [ "content", "title" ]
           }
-        }
+        },
       }
     });
+
     const hits = body.hits.hits;
     return hits.map((item) => item._source);
   }
